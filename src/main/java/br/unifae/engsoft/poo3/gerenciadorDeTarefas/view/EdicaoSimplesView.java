@@ -15,7 +15,7 @@ public class EdicaoSimplesView extends javax.swing.JFrame {
         initComponents();
         
         DescricaoTxt.setText(descricao);
-        PrioridadeCombo.setSelectedItem(prioridade);
+        PrioridadeCombo.setSelectedIndex(prioridade-1);
         ConcluidaCheck.setSelected(concluida);
 
     }

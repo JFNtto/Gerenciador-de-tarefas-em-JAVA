@@ -5,7 +5,6 @@ import br.unifae.engsoft.poo3.gerenciadorDeTarefas.controller.TarefaComPrazoCont
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.controller.TarefaSImplesController;
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.GerenciaTarefa;
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.Tarefa;
-import br.unifae.engsoft.poo3.gerenciadorDeTarefas.view.EdicaoComPrazoView;
 import java.time.LocalDate;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -169,7 +168,7 @@ public class TabelaTarefaComPrazoView extends javax.swing.JFrame {
         if(jTable1.getSelectedRow() == -1){
                 JOptionPane.showMessageDialog(null, "Escolha um item da tabela");
             }else{
-                TarefaSImplesController tsc = new TarefaSImplesController();
+                TarefaComPrazoController tsc = new TarefaComPrazoController();
                 tsc.priozirarTarefa(5);
                 this.dispose();
                 TelaInicialView ti = new TelaInicialView();

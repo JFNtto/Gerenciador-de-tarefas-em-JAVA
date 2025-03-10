@@ -5,7 +5,6 @@ import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.GerenciaTarefa;
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.Priozitizavel;
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.Tarefa;
 import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.TarefaComPrazo;
-import br.unifae.engsoft.poo3.gerenciadorDeTarefas.model.TarefaSimples;
 import java.time.LocalDate;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -97,13 +96,13 @@ public class TarefaComPrazoController implements Priozitizavel{
             List<Tarefa> tarefas = GerenciaTarefa.getTarefas();
 
             for(Tarefa tarefa : tarefas){
-            if(tarefa instanceof TarefaSimples tarefaSimples){
+            if(tarefa instanceof TarefaComPrazo tarefaComPrazo){
 
-                    tarefaSimples.setPrioridade(prioridadeNova);
+                    tarefaComPrazo.setPrioridade(prioridadeNova);
                     JOptionPane.showMessageDialog(null, "A Prioridade da tarefa aumentou", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
                 }
                     break;
-                }
+                }   
             }
     
 }
